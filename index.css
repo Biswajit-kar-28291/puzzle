@@ -1,0 +1,233 @@
+body{
+    background: url('https://static.vecteezy.com/system/resources/previews/004/766/938/non_2x/abstract-purple-background-modern-design-free-vector.jpg');
+  background-size: cover; 
+   background-position: center;
+    background-repeat: no-repeat;
+    color:aliceblue;
+    /* background-color: rgb(227, 122, 157); */
+
+}
+
+.main-box{
+    width: 80%;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.navbar{
+   /* width: 90%; */
+   display: flex;
+   gap: 56%;
+   height: 7dvh;
+    margin: auto;
+    align-items: center;
+    /* border: 2px solid rgb(0, 255, 85);  */
+}
+.navbar img{
+    width: 10%;
+    height: 70px;
+    animation: left 2s ease-out forwards;
+}
+.navbar div{
+    display: flex;
+    gap: 50px;
+    animation: right 2s ease-out forwards;
+}
+
+.navbar div a{
+    /* text-decoration: none; */
+    font-size: 20px;
+    letter-spacing: 2px;
+        color:aliceblue;
+
+}
+
+.navbar div a:hover{
+    transform: scale(1.1);
+}
+.navbar div a:active{
+    transform: scale(0.9);
+}
+
+.body{
+    display: flex;
+    /* gap: 50px; */
+    /* border:2px solid  yellow; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.leftbox{
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 80dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: left 2s ease-out forwards;
+}
+
+@keyframes left{
+    from{
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.leftbox img{
+    width: 60%;
+    height: 55dvh;
+    /* border: 2px solid rgba(178, 209, 237, 0.926); */
+    border-radius: 50%;
+    box-shadow: rgb(228, 228, 238) 0px 0px 16px;
+    
+}
+
+
+
+.rightbox{
+    /* border:2px solid burlywood; */
+    width: 50%;
+    height: 80dvh;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    animation: right 2s ease-out forwards;
+}
+
+@keyframes right{
+    from{
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.rightbox h1{
+    font-size: 50px;
+    line-height: 45px;
+   
+    color: rgba(252, 210, 0, 0.598);
+}
+.rightbox p{
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.rightbox button{
+    width: 45%;
+    margin-left: auto;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 157, 0);
+}
+
+.rightbox button:hover{
+    transform: scale(1.04);
+    background-color: rgb(253, 174, 48);
+}
+.rightbox button:active{
+    transform: scale(0.9);
+     background-color: rgb(249, 161, 19);
+}
+.footer{
+    /* border: 2px solid red; */
+    padding: 10px;
+    text-align: center;
+    color: plum;
+    /* width: 90%;
+    margin: auto; */
+    animation: up 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+
+    @keyframes up{
+    from{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.footer h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .main-box{
+        width: 100%;
+    }
+
+    .body{
+        flex-direction: column;
+    }
+
+    .leftbox{
+        width: 100%;
+        order:2;
+    }
+    .rightbox{
+        width: 100%;
+        margin: 0px;
+        text-align: center;
+        order: 1;
+         padding: 0px;
+
+    }
+    .rightbox button{
+        margin: auto;
+    }
+
+    .navbar{
+   /* gap: ; */
+   gap:40%;
+   
+}
+.navbar img{
+    /* width: 10%; */
+    height: 50px;
+}
+.navbar div{
+    /* display: flex; */
+    gap: 10%;
+}
+
+
+
+} 
+
+    @media (min-width: 0px) and (max-width: 450px) { 
+
+      .navbar{
+        gap:20%;
+      }
+      .navbar div a{
+        font-size: medium;
+      }
+      .leftbox{
+        height: 50dvh;
+      }
+      .leftbox img{
+        height: 40dvh;
+      }
+      .rightbox{
+        padding: 0px;
+        height: 50dvh;
+      }
+} 
