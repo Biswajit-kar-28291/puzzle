@@ -66,6 +66,10 @@ body{
     align-items: center;
     /* border: 2px solid rgb(0, 255, 85);  */
 }
+
+audio {
+  display: none; /* Hide default controls */
+}
 .navbar img{
     width: 10%;
     height: 70px;
@@ -280,7 +284,7 @@ body{
     @media (min-width: 0px) and (max-width: 450px) { 
 
       .navbar{
-        gap:20%;
+        gap:40%;
       }
       .navbar div a{
         font-size: medium;
