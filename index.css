@@ -26,12 +26,12 @@ body{
 .navbar img{
     width: 10%;
     height: 70px;
-    animation: left 2s ease-out forwards;
+    animation: left 1.5s ease-out forwards;
 }
 .navbar div{
     display: flex;
     gap: 50px;
-    animation: right 2s ease-out forwards;
+    animation: right 1.5s ease-out forwards;
 }
 
 .navbar div a{
@@ -65,7 +65,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: left 2s ease-out forwards;
+    animation: left 1.5s ease-out forwards;
 }
 
 @keyframes left{
