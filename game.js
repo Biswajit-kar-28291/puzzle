@@ -8,13 +8,6 @@ window.onload = function() {
     const hintIcon = document.getElementById('hintIcon');
     const referenceImage = document.getElementById('referenceImage');
     const soundToggle = document.getElementById('soundToggle');
-     const logoImg = document.getElementById('logoImg');
-    if (logoImg) {
-        logoImg.style.cursor = "pointer";
-        logoImg.addEventListener('click', function() {
-            window.location.href = "index.html";
-        });
-    }
 
     const images = [
         'https://images.fineartamerica.com/images/artworkimages/medium/3/the-interesting-book-seymour-joseph-guy.jpg',
@@ -28,9 +21,11 @@ window.onload = function() {
         'https://i.pinimg.com/736x/17/76/0a/17760a6daad2edf7f4d9b837b5437246.jpg'
     ];
 
-
     let rows = 3, cols = 3, currentImage = images[0], moves = 0;
     let soundOn = true;
+
+    // Hide the bulb icon initially
+    hintIcon.style.display = 'none';
 
     function randomImage() {
         const idx = Math.floor(Math.random() * images.length);
@@ -39,6 +34,15 @@ window.onload = function() {
 
     function updateMoves(count) {
         moveCounter.textContent = 'Moves: ' + count;
+        // Show bulb icon after 5 moves
+        if (count >= 5) {
+            hintIcon.style.display = 'inline';
+        } else {
+            hintIcon.style.display = 'none';
+            // Also hide the reference image if bulb is hidden
+            referenceImage.style.display = 'none';
+            referenceImage.innerHTML = '';
+        }
     }
 
     function createPuzzle(rows, cols, imageUrl) {
@@ -172,6 +176,7 @@ window.onload = function() {
 
         referenceImage.style.display = 'none';
         referenceImage.innerHTML = '';
+        hintIcon.style.display = 'none'; // Hide hint icon on new game
 
         createPuzzle(rows, cols, currentImage);
         startGame();
