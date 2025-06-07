@@ -9,7 +9,7 @@
 <body>
     <div class="main-box">
         <div class="navbar">
-            <img src="puzzle.png" alt="no image">
+            <img id="logoImg" src="puzzle.png" alt="no image">
             <div>
                 <a href="index.html">Home</a>
                 <a href="#contact">Contact Us</a>
@@ -25,10 +25,19 @@
                 </select>
                 <button id="startBtn">Start</button>
             </div>
-            <div id="moveCounter" style="margin:auto; text-align:center;width: 50%; color: rgb(0, 237, 4); font-size: 18px; margin-bottom: 10px;background: rgba(213, 199, 241, 0.7);; padding: 10px;border-radius: 15px;">
+            <div id="moveCounter" style="margin:auto; text-align:center;width: 50%; color: rgb(0, 237, 4); font-size: 18px; margin-bottom: 10px;background: rgba(213, 199, 241, 0.7); padding: 10px;border-radius: 15px;">
                 Moves: 0
             </div>
-            
+
+            <!-- Bulb and Sound Toggle Icons -->
+            <div style="text-align: center; margin: 10px 0;">
+                <span id="hintIcon" style="cursor: pointer; font-size: 28px;" title="Show/Hide Solution">💡</span>
+                <button id="soundToggle" title="Toggle Sound" style="background: none; border: none; cursor: pointer; font-size: 28px; color: #ffd600; vertical-align: middle; margin-left: 12px;">
+                    🔊
+                </button>
+                <div id="referenceImage" style="display: none; margin: 10px auto; max-width: 400px; border: 2px solid white; border-radius: 8px; overflow: hidden;"></div>
+            </div>
+
             <!-- Audio Elements -->
             <audio id="playing-sound" src="game-sound.mp3" loop></audio>
             <audio id="end-sound" src="game-over.mp3"></audio>
@@ -39,7 +48,6 @@
             <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem aperiam eveniet iste rit, laudantium, deserunt ea possimus. Dolore, totam, minima veritatis velit iusto minus saepe nam vel voluptates temporibus aliquam officia impedit necessitatibus mollitia ex provident omnis quidem ea incidunt praesentium architecto excepturi natus? Deserunt.</h5>
         </div>
     </div>
-
     <script src="game.js"></script>
-    </body>
+</body>
 </html>
